@@ -123,13 +123,14 @@ def compress(string):
         if char != curr_char:
             compressed.append(curr_char)
 
-            if(char_count > 1):
+            if char_count > 1:
                 compressed.append(str(char_count))
 
             curr_char = char
             char_count = 0  
 
         char_count = char_count + 1
+        
     compressed.append(curr_char)
     
     if char_count > 1:
